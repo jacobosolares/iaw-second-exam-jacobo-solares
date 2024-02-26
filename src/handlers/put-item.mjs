@@ -38,10 +38,7 @@ export const putItemHandler = async (event) => {
 
     // Creates a new item, or replaces an old item with a new item
     // https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html#put-property
-    var params = {
-        TableName : tableName,
-        Item: { id : id, name: name }
-    };
+
 
     try {
         const data = await ddbDocClient.send(new PutCommand(params));
